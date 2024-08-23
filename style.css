@@ -1,0 +1,22 @@
+* {
+	list-style: none;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+main {
+	height: 100%;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	place-items: center;
+	/* padding: 50px; */
+	height: 100vh;
+}
+
+img{
+	width: 250px;
+}
