@@ -4,11 +4,11 @@
 	text-decoration: none;
 }
 
-main {
+.main {
 	height: 100%;
 }
 
-.grid-container {
+.main .grid-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
@@ -17,6 +17,29 @@ main {
 	height: 100vh;
 }
 
-img{
+.main .grid-container img{
 	width: 250px;
+}
+
+.main .pagination {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	margin: 0 auto;
+}
+
+.main .pagination ul {
+	padding: 15px;
+	display: flex;
+	gap: 10px;
+	margin: 10px;
+}
+
+.main .pagination ul li {
+	padding: 15px 20px;
+	background-color: blueviolet;
+}
+
+.main .pagination ul li.active {
+	background-color: aqua;
 }
