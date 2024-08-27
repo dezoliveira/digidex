@@ -102,14 +102,22 @@ const createPagination = (pageable) => {
 	pagination.innerHTML = html
 }
 
+// Get Digi Status
+const getDigitStatus = async (id) => {
+  const request = await fetch(`https://digi-api.com/api/v1/digimon/${id}`)
+	const data = await request.json()
+  return data
+}
+
 const renderDigimons = (digimons) => {
 	let html = ''
 	console.log(digimons)
 
 	if (digimons.length) {
 		for (let d in digimons) {
+
 			html += `
-				<div id=${digimons[d].id}>
+				<div id=${digimons[d].id} class="digi-card">
 					<span class="digiImage">
 						<a href=${digimons[d].href}>
 							<img src="${digimons[d].image}" />
