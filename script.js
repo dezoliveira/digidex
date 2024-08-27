@@ -11,7 +11,7 @@ const swapPagination = (pageId, back, next) => {
   getDigimons()
 }
 
-const backPage = () => {
+const backPage = () => {  
   if (pageNumber !== 0) {
     pageNumber = pageNumber - 1
     getDigimons()
@@ -22,6 +22,7 @@ const backPage = () => {
 
 const nextPage = () => {
   const showingPages = 5
+
   if (pageNumber < showingPages -1) {
     pageNumber = pageNumber + 1
     getDigimons()
@@ -44,12 +45,18 @@ const createPagination = (pageable) => {
 
 	for (i=0; i <= showingPages -1; i++) {
     let activeClass = ''
+    let disableClass = ''
     let pageId = i
+
+    if (pageNumber === 0) {
+      disableClass = 'disabled'
+    }
 
     if (i === 0) {
       html +=`
         <li
           id="pageBack"
+          class="${disableClass}"
           onclick="backPage(${pageId})">
             <
         </li>
@@ -68,19 +75,25 @@ const createPagination = (pageable) => {
           ${i+1}
       </li>
 		`
+
+    disableClass = ''
+
+    if (pageNumber === showingPages -1) {
+      disableClass = 'disabled'
+    }
     
     if (i === showingPages -1) {
       html +=`
         <li
           id="pageNext"
-          onclick="nextPage(${pageId})">
-            >
+          class="${disableClass}"
+          onclick="nextPage(${pageId})"
+        >
+          >
         </li>
       `
     }
 	}
-
-  
 
   html += `
     </ul>

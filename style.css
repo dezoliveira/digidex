@@ -36,8 +36,9 @@
 }
 
 .main .pagination ul li {
-	padding: 15px 20px;
+	padding: 8px 12px;
 	background-color: blueviolet;
+	border-radius: 5%;
 }
 
 .main .pagination ul li:hover {
@@ -47,4 +48,10 @@
 
 .main .pagination ul li.active {
 	background-color: aqua;
+}
+
+.main .pagination ul li.disabled {
+	pointer-events: none;
+	background-color: gray;
+	color: #fff;
 }
