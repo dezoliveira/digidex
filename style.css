@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'DigiFont';
+	src: url('/font/DigimonBasic.ttf'); /* IE9 Compat Modes */
+}
+
+html {
+	font-family: 'DigiFont', sans-serif;
+}
+
 * {
 	list-style: none;
 	box-sizing: border-box;
@@ -19,6 +28,13 @@
 
 .main .digi-card img{
 	width: 200px;
+}
+
+.main .digi-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .main .pagination {
