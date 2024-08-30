@@ -8,13 +8,24 @@
 </head>
 <body>
   <main class="main">
+    <div id="particles-js" class="particles">
+
+    </div>
+
     <div id="grid-container" class="grid-container">
       
     </div>
+    
     <div id="pagination" class="pagination">
       
     </div>
   </main>
   <script src="/script.js"></script>
+  <script src="/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
 </body>
 </html>
