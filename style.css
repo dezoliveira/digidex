@@ -63,12 +63,18 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: gold;
+	overflow: hidden;
 }
 
 .main .digi-card .digi-image img{
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
 	width: 250px;
+	height: 250px;
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 250px;
+	max-height: 250px;
 }
 
 .main .digi-card h1{
