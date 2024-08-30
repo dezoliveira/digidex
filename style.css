@@ -39,15 +39,41 @@ body {
 	height: 100vh;
 }
 
-.main .digi-card img{
-	width: 200px;
-}
-
 .main .digi-card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 25px;
+	background-color:#111827;	
+	z-index: 2;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.main .digi-card:hover {
+	cursor: pointer;
+	scale: (1,1);
+	opacity: .9;
+
+}
+
+.main .digi-card .digi-title{
+	width: 100%;
+	display: flex;
+	align-items: center;
 	justify-content: center;
+	background-color: gold;
+}
+
+.main .digi-card .digi-image img{
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	width: 250px;
+}
+
+.main .digi-card h1{
+	font-size: xx-large;
+	color:#111827
 }
 
 .main .pagination {

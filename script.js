@@ -118,13 +118,13 @@ const renderDigimons = (digimons) => {
 
 			html += `
 				<div id=${digimons[d].id} class="digi-card">
-					<span class="digiImage">
+					<span class="digi-image">
 						<a href=${digimons[d].href}>
 							<img src="${digimons[d].image}" />
 						</a>
 					</span>
-					<span>
-						<h2>${digimons[d].name}</h2>	
+					<span class="digi-title">
+						<h1>${digimons[d].name}</h1>	
 					</span>
 				</div>
 			`
